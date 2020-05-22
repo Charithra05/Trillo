@@ -1,5 +1,6 @@
 .logo{
     height:4.5rem;
+    margin-left: 1rem;
 }
 
 .search{
@@ -49,7 +50,7 @@
     &__icon{
         height: 2rem;
         width: 2rem;
-        fill: var(--color-grey-dark-3);
+        fill: var(--Grey-dark-3);
     }
 }
 
@@ -143,7 +144,7 @@
     &__link:link,
     &__link:visited{
         text-decoration: none; 
-        color: var(--color-grey-light-1);
+        color: white; 
         display: block;
         text-transform: uppercase;
         padding: 1.5rem 3rem;
@@ -171,3 +172,109 @@
     padding: 2.5rem;
 }
 
+/////gallery/////
+
+.gallery{
+    display: flex;
+    &__photo{
+        width: 100%;
+        display: block;
+    }
+}
+.overview{
+    display: flex; 
+    align-items: center;
+    background-color: white;
+    flex-wrap: wrap;
+
+    &__heading {
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;   
+        padding: 1.8rem 1rem 1.2rem 2rem;
+
+    }
+
+    &__stars{
+        margin-right: auto;
+        display: flex;
+    }
+
+    &__icon-star,
+    &__icon-location{
+        height: 2.25rem;
+        width: 2.25rem;
+        fill: var(--color-primary);
+    }
+
+
+    &__location {
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon-location {
+        margin-right: .5rem; 
+    }
+
+    &__rating {
+        background-color: var(--color-primary);
+        color: white;
+        margin-left: 3rem;
+        align-self: stretch;  
+        padding: 0rem 1rem; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+/////button inline//
+.btn-inline {
+    border: none;
+    color: var(--color-primary);
+    font-size: inherit; // we use the button at various places so in diiferent palces inthe parent element we define the fonr size so we achive the reusablity
+    border-bottom: 1px solid currentColor;  // current color ... so that we have common color for both text and the border
+    cursor: pointer;
+    display: inline-block;
+    background-color: transparent;
+    transition: all .2s;
+    font-weight: 600;
+    padding-bottom: .5rem; 
+
+    & span {
+        margin-left: .5rem;    
+        transition: margin-left .2s; 
+    }
+
+    &:hover { 
+        color: var(--color-grey-dark-1);
+     }
+
+     &:hover span {
+         margin-left: 1.2rem;   
+     }
+    &:focus { 
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+
+    @keyframes pulsate {
+        0% {
+            transform: scale(1);
+            box-shadow: none;
+        }
+        50% {
+            transform: scale(1.05);
+            box-shadow: 0 1rem 2rem rgba(0,0,0,.25);
+        }
+        100% {
+            transform: scale(1);
+            box-shadow: none;
+        }
+    }
+
+}
