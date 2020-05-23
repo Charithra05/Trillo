@@ -18,6 +18,7 @@
 
 .content{
     display: flex;
+    //border-bottom: var(--line);
     //flex-direction: column;
     //justify-content: space-between;
 }
@@ -33,9 +34,26 @@
 
 .hotel-view{
     background-color: #fff;
-
+    //border-bottom: var(--line);
     flex-grow: 1;
 
-    height: 80rem;
+    //height: 80rem;
 
+}
+
+.details{
+    padding: 4.5rem; 
+    display: flex;
+    background-color: var(--Grey-light-1);
+    border:  var(--line);
+    font-size: 1.4rem;
+}
+
+.discription{
+    background-color: #fff;
+    box-shadow: var(--shadow-light);  
+    padding: 3rem; 
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    font-size: 1.4rem;
 }
