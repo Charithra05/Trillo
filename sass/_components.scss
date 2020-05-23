@@ -408,3 +408,65 @@
     }
     
 }
+////////CTA/////////
+.cta {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    &__book-now {
+        font-weight: 300; 
+        font-size: 2rem; 
+        flex: 0 0 100%;  
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+////////btn last/////
+
+.btn {
+    border: none;
+    padding: 1rem 3rem; 
+    border-radius: 10rem;
+    background-image: linear-gradient(to right,var(--color-primary-light), var(--color-primary-dark)); 
+    color: white; 
+    width: 18rem;     
+    height: 4rem;      
+    font-size: 1.5rem; 
+    overflow: hidden;  
+    position: relative;
+
+    .btn--invisible {
+        position: absolute;
+        left: 6rem;   
+        top: -4rem; 
+        transition: all .3s;         
+    }  
+    .btn--visible {   
+        position: absolute; 
+        left: 3.8rem;     
+        top: 1rem;       
+        transition: all .3s;         
+    }  
+    &:hover {  
+        background-image: linear-gradient(to left,var(--color-primary-light), var(--color-primary-dark)); 
+   
+        .btn--invisible { 
+            position: absolute;
+            left: 6rem;   
+            top: 1rem;               
+        }  
+        .btn--visible { 
+            position: absolute;
+            left: 3.8rem;       
+            top: 5rem;               
+        }  
+
+    }
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+}
