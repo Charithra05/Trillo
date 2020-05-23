@@ -63,13 +63,21 @@ html {
   align-items: center;
   flex: 0 0 40%;
   justify-content: center; }
+  @media only screen and (max-width: 31.25em) {
+    .search {
+      order: 1;
+      background-color: var(--color-grey-light-2);
+      flex: 0 0 100%; } }
   .search__input {
     border-radius: 100px;
     width: 90%;
     border: none;
     margin-right: -3.25rem;
     padding: .7rem 2rem;
-    background-color: var(--Grey-light-2); }
+    background-color: var(--Grey-light-2);
+    color: black; }
+    .search__input::placeholder {
+      color: --color-primary-light; }
     .search__input:focus {
       outline: none;
       width: 100%;
@@ -126,10 +134,20 @@ html {
     margin-top: 3.5rem;
     list-style: none;
     font-size: 1.4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__list {
+        display: flex;
+        margin-top: 0; } }
   .side-nav__item {
     position: relative; }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .side-nav__item:not(:last-child) {
+          margin-bottom: 0; } }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__item {
+        flex: 1; } }
     .side-nav__item::before {
       content: "";
       position: absolute;
@@ -155,17 +173,27 @@ html {
     z-index: 10;
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        flex-direction: column;
+        padding: .5rem 2rem; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__icon {
+        margin-right: 0; } }
 
 .legal {
   font-size: 1.2rem;
   color: var(-Grey-light-4);
   text-align: center;
   padding: 2.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -185,9 +213,20 @@ html {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.8rem 1rem 1.2rem 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__heading {
+        font-size: 1.8rem;
+        letter-spacing: .5px;
+        padding: 1.5rem .5rem 1rem 1.5rem;
+        margin-right: auto; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
+    @media only screen and (max-width: 31.25em) {
+      .overview__stars {
+        order: 1;
+        margin-left: 3rem;
+        margin-bottom: .5rem; } }
   .overview__icon-star, .overview__icon-location {
     height: 2.25rem;
     width: 2.25rem;
@@ -208,6 +247,9 @@ html {
     align-items: center;
     justify-content: center;
     flex-direction: column; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating {
+        padding: 0 1.5rem; } }
 
 .btn-inline {
   border: none;
@@ -269,6 +311,14 @@ html {
     -webkit-mask-size: cover;
     mask-image: url(../img/chevron-thin-right.svg);
     mask-size: cover; }
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      .list__item::before {
+        background-color: var(--color-primary);
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+        mask-image: url(../img/chevron-thin-right.svg);
+        mask-size: cover;
+        background-image: none; } }
 
 .recommand {
   font-size: 1.3rem;
@@ -382,6 +432,11 @@ html {
   margin: 8rem auto;
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-dark); }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      max-width: 100%;
+      width: 100%; } }
 
 .header {
   height: 7rem;
@@ -391,9 +446,17 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 31.25em) {
+    .header {
+      flex-wrap: wrap;
+      align-content: space-around;
+      height: 10rem; } }
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .sidder {
   background-color: var(--Grey-dark-1);
@@ -412,6 +475,13 @@ html {
   background-color: var(--Grey-light-1);
   border: var(--line);
   font-size: 1.4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .details {
+      padding: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .details {
+      flex-direction: column;
+      justify-content: center; } }
 
 .discription {
   background-color: #fff;
@@ -420,6 +490,13 @@ html {
   flex: 0 0 60%;
   margin-right: 4.5rem;
   font-size: 1.4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .discription {
+      padding: 1.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .discription {
+      margin: 0;
+      margin-bottom: 3.5rem; } }
 
 .user-reviews {
   background-color: var(--color-grey-light-1);

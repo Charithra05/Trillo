@@ -3,6 +3,12 @@
     margin: 8rem auto;
     background-color: var(--color-grey-light-2);
     box-shadow: var(--shadow-dark);
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0;
+        max-width: 100%; 
+        width: 100%;
+    }
 }
 
 .header{
@@ -14,6 +20,12 @@
     justify-content: space-between;
     align-items: center;
 
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap; 
+        align-content: space-around; 
+        height: 10rem; 
+    }
+
 }
 
 .content{
@@ -21,6 +33,10 @@
     //border-bottom: var(--line);
     //flex-direction: column;
     //justify-content: space-between;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+     }
 }
 
 .sidder{
@@ -47,6 +63,15 @@
     background-color: var(--Grey-light-1);
     border:  var(--line);
     font-size: 1.4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+    } 
+
+      @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .discription{
@@ -56,6 +81,12 @@
     flex: 0 0 60%;
     margin-right: 4.5rem;
     font-size: 1.4rem;
+
+    @media only screen and (max-width: $bp-medium) { padding:1.5rem} 
+    @media only screen and (max-width: $bp-small) {
+        margin: 0;  
+        margin-bottom: 3.5rem; 
+    }
 }
 
 .user-reviews {
